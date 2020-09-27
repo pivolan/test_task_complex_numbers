@@ -18,12 +18,21 @@ class ComplexNumber
      */
     private $imaginaryPart = 0.0;
 
+    /**
+     * ComplexNumber constructor.
+     * @param float $realPart
+     * @param float $imaginaryPart
+     */
     public function __construct(float $realPart, float $imaginaryPart)
     {
         $this->realPart = $realPart;
         $this->imaginaryPart = $imaginaryPart;
     }
 
+    /**
+     * @param ComplexNumber $complexNumber
+     * @return $this
+     */
     public function add(ComplexNumber $complexNumber): ComplexNumber
     {
         $this->realPart += $complexNumber->getRealPart();
@@ -32,6 +41,10 @@ class ComplexNumber
         return $this;
     }
 
+    /**
+     * @param ComplexNumber $complexNumber
+     * @return $this
+     */
     public function subtract(ComplexNumber $complexNumber): ComplexNumber
     {
         $this->realPart -= $complexNumber->getRealPart();
@@ -40,6 +53,10 @@ class ComplexNumber
         return $this;
     }
 
+    /**
+     * @param ComplexNumber $complexNumber
+     * @return $this
+     */
     public function multiply(ComplexNumber $complexNumber): ComplexNumber
     {
         $realPart = $this->getRealPart() * $complexNumber->getRealPart() - $this->getImaginaryPart(
@@ -52,6 +69,11 @@ class ComplexNumber
         return $this;
     }
 
+    /**
+     * @param ComplexNumber $complexNumber
+     * @return $this
+     * @throws DivisionByZeroException
+     */
     public function divide(ComplexNumber $complexNumber): ComplexNumber
     {
         $ar = $this->getRealPart();
