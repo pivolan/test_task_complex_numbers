@@ -1,0 +1,26 @@
+{
+  "name": "pivolan/test_task_complex_numbers",
+  "description": "test task for complex numbers",
+  "type": "library",
+  "version": "v0.1",
+  "require": {
+    "php": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3"
+  },
+  "authors": [
+    {
+      "name": "pivolan",
+      "email": "pivolan@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"pivolan\\ComplexNumbers\\": "src/"}
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "Tests/"
+    }
+  }
+}
