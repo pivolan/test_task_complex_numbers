@@ -91,5 +91,3 @@ class ComplexNumber
         return $this->imaginaryPart;
     }
 }
-
-new ComplexNumber(10, 10);
